@@ -1,10 +1,8 @@
 from datetime import  datetime
 
 from django.db import models
-<<<<<<< HEAD
 from DjangoUeditor.models import UEditorField
-=======
->>>>>>> 21b2e7f... first
+
 
 # Create your models here.
 
@@ -23,16 +21,10 @@ class GoodsCategory(models.Model):
     code = models.CharField(default="", max_length=30, verbose_name="类别code", help_text="类别code")
     desc = models.TextField(default="", max_length=200, verbose_name="类别描述", help_text="类别描述")
     category_type = models.IntegerField(choices=CATEGORY_TYPE, verbose_name="类目级别", help_text="类目级别")
-<<<<<<< HEAD
     parent_category = models.ForeignKey("self", null=True, blank=True, verbose_name="父类目级别", help_text="父类目级别",
                                         on_delete=models.CASCADE)
     is_tab = models.BooleanField(default=False, verbose_name="是否导航", help_text="是否导航")
     add_time = models.DateTimeField(default=datetime.now, verbose_name="添加时间")
-=======
-    parent_category = models.ForeignKey("self", null=True, blank=True, verbose_name="父类目级别", help_text="父类目级别")
-    is_tab = models.BooleanField(default=False, verbose_name="是否导航", help_text="是否导航")
-    add_time = models.DateTimeField(default=datetime.now, validators="添加时间")
->>>>>>> 21b2e7f... first
 
     class Meta:
         verbose_name = "商品类别"
@@ -46,20 +38,12 @@ class GoodsCategoryBrand(models.Model):
     """
     品牌名
     """
-<<<<<<< HEAD
     category = models.ForeignKey(GoodsCategory, related_name="brands", null=True, blank=True, verbose_name="商品类目",
                                  on_delete=models.CASCADE)
     name = models.CharField(default="", max_length=30, verbose_name="品牌名", help_text="品牌名")
     desc = models.TextField(default="", max_length=200, verbose_name="品牌描述", help_text="品牌描述")
     image = models.ImageField(max_length=200, upload_to="brand/")
     add_time = models.DateTimeField(default=datetime.now, verbose_name="添加时间")
-=======
-    category = models.ForeignKey(GoodsCategory, related_name="brands", null=True, blank=True, verbose_name="商品类目")
-    name = models.CharField(default="", max_length=30, verbose_name="品牌名", help_text="品牌名")
-    desc = models.TextField(default="", max_length=200, verbose_name="品牌描述", help_text="品牌描述")
-    image = models.ImageField(max_length=200, upload_to="brand/")
-    add_time = models.DateTimeField(default=datetime.now, validators="添加时间")
->>>>>>> 21b2e7f... first
 
     class Meta:
         verbose_name = "品牌"
@@ -68,7 +52,7 @@ class GoodsCategoryBrand(models.Model):
 
     def __str__(self):
         return self.name
-<<<<<<< HEAD
+
 
 
 
@@ -101,6 +85,18 @@ class Goods(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class IndexAd(models.Model):
+    category = models.ForeignKey(GoodsCategory, related_name='category',verbose_name="商品类目", on_delete=models.CASCADE)
+    goods = models.ForeignKey(Goods, related_name='goods', on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = '首页商品类别广告'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.goods.name
 
 
 class GoodsImage(models.Model):
@@ -150,5 +146,3 @@ class HotSearchWords(models.Model):
 
     def __str__(self):
         return self.keywords
-=======
->>>>>>> 21b2e7f... first

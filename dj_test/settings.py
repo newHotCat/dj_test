@@ -41,15 +41,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
 
     'DjangoUeditor',
-    'users',
-    'goods',
-    'trade',
-    'user_opration',
-=======
->>>>>>> 21b2e7f... first
+    'users.apps.UsersConfig',
+    'goods.apps.GoodsConfig',
+    'trade.apps.TradeConfig',
+    'user_opration.apps.UserOprationConfig',
+    'xadmin',
+    'crispy_forms',
+    'reversion'
 ]
 
 MIDDLEWARE = [
@@ -93,7 +93,7 @@ DATABASES = {
         'NAME': 'mxshop',
         'USER': 'root',
         'PASSWORD': 'example',
-        'HOST': 'www.liujiantong.cn',
+        'HOST': '139.199.128.228',
         # 第三方登录时 会出错需要设置 数据库
         'OPTIONS': {'init_command': 'SET default_storage_engine=INNODB'}
     }
@@ -121,15 +121,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
+# 设置时区
+LANGUAGE_CODE = 'zh-hans'  # 中文支持，django1.8以后支持；1.8以前是zh-cn
+TIME_ZONE = 'Asia/Shanghai'
 USE_I18N = True
-
 USE_L10N = True
-
-USE_TZ = True
+USE_TZ = False   # 默认是Ture，时间是utc时间，由于我们要用本地时间，所用手动修改为false！！！！
 
 
 # Static files (CSS, JavaScript, Images)
