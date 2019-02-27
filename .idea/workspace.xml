@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99b971e7-7a7f-45f9-bb63-d1dd7bae450c" name="Default Changelist" comment="migrations">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/goods/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/migrations/0001_initial.py" afterDir="false" />
-    </list>
+    <list default="true" id="99b971e7-7a7f-45f9-bb63-d1dd7bae450c" name="Default Changelist" comment="migrations" />
     <list id="29015dda-c4a9-4b49-b1be-cd53a1069eab" name="first" comment="first&#10;&#10;(cherry picked from commit 21b2e7fdf6b9870247b1b681bd93d34e09204863)">
       <changelist_data name="jiantong.liu" email="liujiantongvip@163.com" date="1551170540000" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/goods/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dj_test/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dj_test/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,17 +15,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -155,7 +138,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551163890665</updated>
-      <workItem from="1551163937041" duration="10264000" />
+      <workItem from="1551163937041" duration="11057000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1551170540415</created>
@@ -175,7 +158,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10264000" />
+    <option name="totallyTimeSpent" value="11057000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -188,10 +171,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2560" y="23" width="1920" height="1177" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="manage.py@dj_test" weight="0.3299539" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -199,7 +181,7 @@
       <window_info anchor="bottom" id="Python Console" weight="0.3299539" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32718894" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32718894" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3299539" />
