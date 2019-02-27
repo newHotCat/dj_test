@@ -6,3 +6,4 @@ django python mxstore
 # 测试pycharm 的 git
 # 测试pycharm 的 git 2
 # 测试pycharm 的 git 2
+# 测试pycharm 的 git 2
