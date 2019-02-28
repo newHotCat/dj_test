@@ -19,11 +19,15 @@ from django.views.static import serve
 import xadmin
 
 from dj_test.settings import MEDIA_ROOT
-
+from goods.views_base import GoodsListView
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('xadmin/', xadmin.site.urls),
-    re_path(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT})
+    re_path(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
+
+    # 商品列表页
+    re_path(r'goods/$', GoodsListView.as_view(), name='goods-list')
 ]
 
+# django restful
