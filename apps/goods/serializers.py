@@ -3,7 +3,19 @@
 
 from rest_framework import serializers
 
+from .models import Goods, GoodsCategory
 
-class GoodsSerializer(serializers.Serializer):
-    name = serializers.CharField(required=True, max_length=100)
-    click_num = serializers.IntegerField(default=0)
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GoodsCategory
+        fields = '__all__'
+
+
+class GoodsSerializer(serializers.ModelSerializer):
+        category = CategorySerializer()
+
+        class Meta:
+            model = Goods
+            fields = '__all__'
+            # fields = ('name', 'click_num', 'fav_num', 'goods_desc', 'add_time', 'goods_front_image')
