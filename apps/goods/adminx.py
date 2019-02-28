@@ -17,12 +17,15 @@ from .models import IndexAd
 
 
 class GoodsAdmin(object):
+    # 要显示的默认字段列表
     list_display = ["name", "click_num", "sold_num", "fav_num", "goods_num", "market_price",
                     "shop_price", "goods_brief", "goods_desc", "is_new", "is_hot", "add_time"]
+    # 使用此属性列出的字段关键字搜索数据
     search_fields = ['name', ]
     list_editable = ["is_hot", ]
     list_filter = ["name", "click_num", "sold_num", "fav_num", "goods_num", "market_price",
                    "shop_price", "is_new", "is_hot", "add_time", "category__name"]
+    # 指定给定字段的样式。样式可以为一种字段类型制作不同的显示效果。
     style_fields = {"goods_desc": "ueditor"}
 
     class GoodsImagesInline(object):
