@@ -11,7 +11,7 @@ from .models import Goods
 
 class GoodsListView(APIView):
     """
-    List all goods
+    List all goods .
     """
     def get(self, request, format=None):
         goods = Goods.objects.all()[:10]

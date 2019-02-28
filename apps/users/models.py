@@ -31,7 +31,7 @@ class UserProfile(AbstractUser):
         """
         打印类的返回
         """
-        return self.name
+        return self.username
 
 
 class VerifyCode(models.Model):
