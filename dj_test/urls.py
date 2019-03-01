@@ -18,9 +18,13 @@ from django.urls import path, re_path, include
 from django.views.static import serve
 import xadmin
 from rest_framework.documentation import include_docs_urls
+from rest_framework.routers import DefaultRouter
 
 from dj_test.settings import MEDIA_ROOT
-from goods.views import GoodsListView
+from goods.views import GoodsListViewSet
+
+router = DefaultRouter()
+router.register(r'goods', GoodsListViewSet, base_name='goods-view')
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -30,7 +34,7 @@ urlpatterns = [
     re_path(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
 
     # 商品列表页
-    re_path(r'goods/', GoodsListView.as_view(), name='goods-list'),
+    re_path(r'^', include(router.urls)),
     re_path(r'docs/', include_docs_urls(title='慕学生鲜')),
 ]
 
