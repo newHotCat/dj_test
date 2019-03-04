@@ -21,10 +21,11 @@ from rest_framework.documentation import include_docs_urls
 from rest_framework.routers import DefaultRouter
 
 from dj_test.settings import MEDIA_ROOT
-from goods.views import GoodsListViewSet
+from goods.views import GoodsListViewSet, GoodsCategoryListViewSet
 
 router = DefaultRouter()
 router.register(r'goods', GoodsListViewSet, base_name='goods-view')
+router.register(r'categories', GoodsCategoryListViewSet, base_name='categories')
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
