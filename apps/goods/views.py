@@ -5,12 +5,13 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 from .models import Goods, GoodsCategory
 from .serializers import GoodsSerializer, CategorySerializer
+from .filter import GoodsFilter
 
 
 class GoodsResultsSetPagination(PageNumberPagination):
-    page_size = 10
+    page_size = 12
     page_size_query_param = 'page_size'
-    page_query_param = 'p'
+    page_query_param = 'page'
     max_page_size = 40
 
 
@@ -22,7 +23,7 @@ class GoodsListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     serializer_class = GoodsSerializer
     pagination_class = GoodsResultsSetPagination
     filter_backends = (DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter)
-    filter_fields = ('shop_price',)
+    filter_class = GoodsFilter
     search_fields = ('name', 'goods_brief')
     ordering_fields = ('shop_price', 'goods_num')
 

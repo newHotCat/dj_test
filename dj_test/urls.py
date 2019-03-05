@@ -19,6 +19,7 @@ from django.views.static import serve
 import xadmin
 from rest_framework.documentation import include_docs_urls
 from rest_framework.routers import DefaultRouter
+from rest_framework.authtoken import views
 
 from dj_test.settings import MEDIA_ROOT
 from goods.views import GoodsListViewSet, GoodsCategoryListViewSet
@@ -37,6 +38,7 @@ urlpatterns = [
     # 商品列表页
     re_path(r'^', include(router.urls)),
     re_path(r'docs/', include_docs_urls(title='慕学生鲜')),
+    re_path(r'^api-token-auth/', views.obtain_auth_token)
 ]
 
 # django restful
