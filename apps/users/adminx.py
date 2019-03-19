@@ -21,7 +21,7 @@ class BaseSetting(object):
     use_bootswatch = True
 
 
-class GlobalSettings(object):
+class GlobalSettings(views.CommAdminView):
     site_title = "慕学生鲜后台"
     site_footer = "mxshop"
     # menu_style = "accordion"
